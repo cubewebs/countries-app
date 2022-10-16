@@ -1,0 +1,28 @@
+<div class="my-5" *ngIf="areCountries">
+    <cdk-virtual-scroll-viewport itemSize="50" minBufferPx="100" maxBufferPx="250" class="table-height">
+        <table>
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Flag</th>
+                    <th>Name</th>
+                    <th>Region</th>
+                    <th>Population</th>
+                    <th>Area</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *cdkVirtualFor="let coun of countries">
+                    <td>{{coun.cca2}}</td>
+                    <td><img style="width: 100px; border: 1px solid #999" [src]="coun.flags.svg" [alt]="coun.name.common"></td>
+                    <td>{{coun.name.common}}</td>
+                    <td>{{coun.region}}</td>
+                    <td>{{coun.population | number}} Personas</td>
+                    <td>{{coun.area | number}}Km<sup>2</sup></td>
+                    <td><a [routerLink]="['/country/', coun.cca2]" (click)="getSelectedCountry(coun.cca2)">More...</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </cdk-virtual-scroll-viewport>
+</div>

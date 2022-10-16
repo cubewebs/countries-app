@@ -1,0 +1,17 @@
+.circle-coa {
+    z-index: 1;
+    width: 20%;
+    height: 20%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 5.4rem;
+    left: 78%;
+}
+.coa {
+    z-index: 2;
+    position: relative;
+    top: 0px;
+    right: 0px;
+}

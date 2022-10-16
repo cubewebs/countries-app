@@ -1,0 +1,12 @@
+<div class="card" *ngIf="country?.cca2 !== ''">
+    <h1 class="text-center">{{country?.name?.common}}</h1>
+    <div class="flex flex-wrap card-container blue-container">
+        <div class="flex-1 align-items-center justify-content-center m-2 border-round">
+            <img [src]="country?.flags?.svg" [alt]="country?.name?.common" class="border-1 border-round" style="width:50vw">
+        </div>
+        <div class="flex-1 flex-column align-items-center justify-content-start bg-blue-500 font-bold text-white m-2 p-4 border-round">
+            <h4>Area: {{country?.area | number}} Km<sup>2</sup></h4>
+            <h4>Capital: {{country?.capital}}</h4>
+        </div>
+    </div>
+</div>
