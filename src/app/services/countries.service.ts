@@ -27,4 +27,5 @@ export class CountriesService {
   getOneCountry( code: string ): Observable<Country> {
     return this.http.get<Country>(`${this.baseUrl}alpha/${code}`)
   }
+  
 }
